@@ -67,7 +67,7 @@ contract Marketplace {
         _itemsSold++;
     }
 
-    function removeMarketItem(address nftAddress, uint256 itemId) public payable {
+    function removeMarketItem(address nftAddress, uint256 itemId) public {
         require(msg.sender == marketItemsList[itemId].seller, "You must be the owner of the token");
 
         uint currentTokenId = marketItemsList[itemId].tokenId;
